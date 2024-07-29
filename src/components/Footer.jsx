@@ -133,16 +133,7 @@ const Footer = () => {
   );
 };
 
-const App = () => {
-  return (
-    <PageWrapper>
-      <ContentWrapper>
-        {/* Your main content goes here */}
-      </ContentWrapper>
-      <Footer />
-    </PageWrapper>
-  );
-};
 
-export default App;
+
+export default Footer;
 

@@ -4,6 +4,7 @@ import Testimonials from "./components/Testimonials";
 import teacher1 from './TeacherPictures/timg1.webp';  
 import teacher2 from './TeacherPictures/timg2.webp';
 import teacher3 from './TeacherPictures/timg3.webp';
+import workImage from './TeacherPictures/work-image.webp'; // Add your image path here
 
 // Styled components
 const AboutWrapper = styled.div`
@@ -27,22 +28,58 @@ const SubHeader = styled.h3`
 
 const Section = styled.section`
   margin-bottom: 40px;
-  text-align: center;
 `;
 
 const SectionTitle = styled.h3`
-  font-size: 2rem; /* Increased font size */
+  font-size: 2rem;
   color: #444;
   margin-bottom: 20px;
 `;
 
 const Paragraph = styled.p`
-  font-size: 1.2rem; /* Increased font size */
+  font-size: 1.2rem;
   color: #555;
-  line-height: 1.8; /* Increased line height for better readability */
+  line-height: 1.8;
   margin: 0 auto;
   max-width: 800px;
   padding: 0 20px;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const TextContent = styled.div`
+  flex: 1;
+  padding: 10px;
+  max-width: 800px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+`;
+
+const ImageContent = styled.div`
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 const MissionFacilitiesContainer = styled.div`
@@ -72,7 +109,7 @@ const TeamGrid = styled.div`
   padding: 0 20px;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr); /* Two columns for mobile view */
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
@@ -107,6 +144,24 @@ const About = () => {
     <AboutWrapper>
       <Header>About Us</Header>
       <SubHeader>Welcome to London Kids Preschool</SubHeader>
+
+      <FlexContainer>
+        <TextContent>
+          <SectionTitle>Learn About Our Work and Cultural Activities</SectionTitle>
+          <Paragraph>
+            London Kids Preschool aspires to democratize international education, merging UK curriculum with Indian standards. Their vision extends from rural to urban India, aligning with national missions. With 800+ centers and a focus on affordability, they emphasize tech-integrated, practical learning. Expansion plans aim for 2000+ franchise centers nationwide, leading towards global outreach.
+            <br/><br/>
+            1. Homelike Environment<br/>
+            2. Quality Educators<br/>
+            3. Safety and Security<br/>
+            4. Play to Learn
+          </Paragraph>
+        </TextContent>
+        <ImageContent>
+          <img src={workImage} alt="Work and Cultural Activities" />
+        </ImageContent>
+      </FlexContainer>
+
       <MissionFacilitiesContainer>
         <MissionFacilitiesItem>
           <SectionTitle>Our Mission</SectionTitle>
@@ -121,6 +176,7 @@ const About = () => {
           </Paragraph>
         </MissionFacilitiesItem>
       </MissionFacilitiesContainer>
+
       <Section>
         <SectionTitle>Meet Our Team</SectionTitle>
         <TeamGrid>
@@ -146,6 +202,7 @@ const About = () => {
           </TeamMember>
         </TeamGrid>
       </Section>
+
       <Testimonials/>
     </AboutWrapper>
   );
