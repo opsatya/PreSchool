@@ -5,7 +5,7 @@ import lkgImage from './ClassesPictures/cimg2.webp';
 import ukgImage from './ClassesPictures/cimg3.webp';
 import firstImage from './ClassesPictures/cimg4.webp';
 import Testimonials from "./components/Testimonials";
-
+import Gallery from './components/Gallary';
 const ClassesWrapper = styled.div`
   background-color: #f9f9f9;
   padding: 40px 20px;
@@ -128,6 +128,7 @@ const Classes = () => {
           <ClassDescription>Advancing skills in reading, writing, mathematics, and social interaction, laying the groundwork for primary schooling.</ClassDescription>
         </ClassCard>
       </ClassesGrid>
+      <Gallery />
       <DownloadButton href="./fee-strcture.pdf" download>
         Download Fee Structure
       </DownloadButton>
