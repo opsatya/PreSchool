@@ -1,16 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaFacebook, FaYoutube, FaInstagram,FaWhatsapp} from 'react-icons/fa';
+import { FaFacebook, FaYoutube, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
-// Styled-components for the footer
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; // Ensure the page takes the full height of the viewport
+`;
+
+const ContentWrapper = styled.div`
+  flex: 1; // This allows the content area to grow and take up available space
+`;
+
 const FooterWrapper = styled.footer`
-  background-color: #000;  // Black background
-  color: #fff;  // White text
+  background-color: #000;
+  color: #fff;
   padding: 20px;
   text-align: center;
 
   @media (max-width: 768px) {
-  max-width:100%;
     padding: 15px;
   }
 `;
@@ -23,7 +31,7 @@ const FooterContent = styled.div`
 
   h2 {
     margin-bottom: 10px;
-    color: #fff;  // White text
+    color: #fff;
   }
 `;
 
@@ -42,7 +50,7 @@ const FooterNav = styled.nav`
     }
 
     a {
-      color: #fff;  // White text
+      color: #fff;
       text-decoration: none;
       font-size: 18px;
 
@@ -57,13 +65,13 @@ const FooterSocial = styled.div`
   margin-bottom: 20px;
 
   a {
-    color: #fff;  // White icons
+    color: #fff;
     font-size: 24px;
     margin: 0 10px;
     text-decoration: none;
 
     &:hover {
-      color: #ddd;  // Light grey on hover
+      color: #ddd;
     }
   }
 `;
@@ -73,15 +81,16 @@ const FooterContact = styled.div`
 
   p {
     margin: 5px 0;
-    color: #fff;  // White text
+    color: #fff;
   }
 `;
+
 const Reserved = styled.div`
   font-size: 14px;
 
   p {
     margin: 5px 0;
-    color: #fff;  // White text
+    color: #fff;
   }
 `;
 
@@ -124,4 +133,16 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+const App = () => {
+  return (
+    <PageWrapper>
+      <ContentWrapper>
+        {/* Your main content goes here */}
+      </ContentWrapper>
+      <Footer />
+    </PageWrapper>
+  );
+};
+
+export default App;
+
