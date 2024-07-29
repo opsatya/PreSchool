@@ -51,6 +51,7 @@ const FlexContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  height:400px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -87,6 +88,7 @@ const MissionFacilitiesContainer = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 40px 0;
+  height:200px;
 `;
 
 const MissionFacilitiesItem = styled.div`
@@ -94,7 +96,7 @@ const MissionFacilitiesItem = styled.div`
   padding: 0 20px;
   box-sizing: border-box;
   max-width: 50%;
-  
+  height: 200px;
   @media (max-width: 768px) {
     max-width: 100%;
     margin-bottom: 20px;
@@ -143,8 +145,8 @@ const About = () => {
   return (
     <AboutWrapper>
       <Header>About Us</Header>
-      <SubHeader>Welcome to London Kids Preschool</SubHeader>
 
+      <SubHeader>Welcome to London Kids Preschool</SubHeader>
       <FlexContainer>
         <TextContent>
           <SectionTitle>Learn About Our Work and Cultural Activities</SectionTitle>
