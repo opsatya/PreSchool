@@ -15,6 +15,7 @@ const ContentWrapper = styled.div`
 const FooterWrapper = styled.footer`
   background-color: #000;
   color: #fff;
+  height:auto;
   padding: 20px;
   text-align: center;
 
