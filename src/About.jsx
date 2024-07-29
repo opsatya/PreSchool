@@ -25,16 +25,6 @@ const SubHeader = styled.h3`
   margin-bottom: 40px;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  max-height: 300px; 
-  max-width: 900px; 
-  border-radius: 8px;
-  margin: 0 auto;
-  display: block;
-  object-fit: cover; 
-`;
-
 const Section = styled.section`
   margin-bottom: 40px;
   text-align: center;
@@ -44,7 +34,6 @@ const SectionTitle = styled.h3`
   font-size: 2rem; /* Increased font size */
   color: #444;
   margin-bottom: 20px;
-
 `;
 
 const Paragraph = styled.p`
@@ -81,6 +70,10 @@ const TeamGrid = styled.div`
   gap: 20px;
   justify-items: center;
   padding: 0 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for mobile view */
+  }
 `;
 
 const TeamMember = styled.div`
@@ -151,12 +144,6 @@ const About = () => {
             <TeamName>Mr. Kumar</TeamName>
             <TeamRole>Art Instructor</TeamRole>
           </TeamMember>
-          <TeamMember>
-            <TeamImage src={teacher3} alt="Teacher 3" />
-            <TeamName>Mr. Kumar</TeamName>
-            <TeamRole>Art Instructor</TeamRole>
-          </TeamMember>
-         
         </TeamGrid>
       </Section>
       <Testimonials/>

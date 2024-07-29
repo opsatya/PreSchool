@@ -12,72 +12,109 @@ import reviewer2 from './TestimonialsPictures/img2.jpeg';
 import reviewer3 from './TestimonialsPictures/img3.jpeg';
 
 const TestimonialsWrapper = styled.div`
-  padding: 30px 0;
+  padding: 50px 20px;
   background-color: #f7f7f7;
   text-align: center;
 
   h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
   }
 
-  .testimonial {
-    padding: 40px;
-    margin: 0 10px;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+  .swiper {
+    padding: 20px 0;
+  }
+
+  .swiper-pagination-bullet {
+    background: #333;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #333;
+  }
+`;
+
+const TestimonialCard = styled.div`
+  padding: 30px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+  .reviewer-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+
+  .testimonial-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-author {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+
+    .star {
+      color: #FFD700;
+      margin-right: 5px;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
 
     .reviewer-photo {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 15px;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
     }
 
     .testimonial-content {
-      font-size: 1.2em;
-      line-height: 1.5;
-      margin-bottom: 20px;
+      font-size: 1rem;
+      line-height: 1.4;
     }
 
     .testimonial-author {
-      font-size: 1.1em;
-      font-weight: bold;
+      font-size: 0.9rem;
     }
 
-    .rating {
-      display: flex;
-      align-items: center;
-      margin-top: 10px;
+    .rating .star {
+      font-size: 1.2rem;
+    }
+  }
 
-      .star {
-        color: #FFD700;
-        margin-right: 5px;
-        font-size: 1.5em;
-      }
+  @media (max-width: 480px) {
+    padding: 15px;
+
+    .reviewer-photo {
+      width: 50px;
+      height: 50px;
     }
 
-    @media (max-width: 768px) {
-      padding: 10px;
-      
-      .reviewer-photo {
-        width: 60px;
-        height: 60px;
-      }
+    .testimonial-content {
+      font-size: 0.9rem;
+    }
 
-      .testimonial-content {
-        font-size: 1em;
-      }
+    .testimonial-author {
+      font-size: 0.8rem;
+    }
 
-      .testimonial-author {
-        font-size: 0.9em;
-      }
-
-      .rating .star {
-        font-size: 0.6rem;
-      }
+    .rating .star {
+      font-size: 1rem;
     }
   }
 `;
@@ -87,102 +124,116 @@ const Testimonials = () => {
     <TestimonialsWrapper>
       <h2>What Parents Say</h2>
       <Swiper
-        spaceBetween={30}
+        spaceBetween={20}
         slidesPerView={3}
         pagination={{ clickable: true }}
         navigation
         modules={[Pagination, Navigation]}
         className="mySwiper"
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        }}
       >
         <SwiperSlide>
-          <div className="testimonial">
+          <TestimonialCard>
             <img src={reviewer1} alt="Parent A" className="reviewer-photo" />
             <p className="testimonial-content">"Nice infrastructure and good faculty."</p>
             <p className="testimonial-author">Srushti Kodag</p>
             <div className="rating">
               <span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span>
             </div>
-          </div>
+          </TestimonialCard>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="testimonial">
+          <TestimonialCard>
             <img src={reviewer2} alt="Parent B" className="reviewer-photo" />
-            <p className="testimonial-content">"Very good staff. The environment is also very good."</p>
+            <p className="testimonial-content">"Very good staff."</p>
             <p className="testimonial-author">Priyanka Sakpal</p>
             <div className="rating">
               <span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span>
             </div>
-          </div>
+          </TestimonialCard>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="testimonial">
+          <TestimonialCard>
             <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
             <p className="testimonial-content">"Good staff, good place, good teaching."</p>
             <p className="testimonial-author">Sudhir Gawade</p>
             <div className="rating">
               <span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span>
             </div>
-          </div>
+          </TestimonialCard>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="testimonial">
+          <TestimonialCard>
             <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
             <p className="testimonial-content">"Great school, great team of teachers."</p>
             <p className="testimonial-author">Dr. Satish Sonkamble</p>
             <div className="rating">
               <span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span>
             </div>
-          </div>
+          </TestimonialCard>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="testimonial">
+          <TestimonialCard>
             <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
             <p className="testimonial-content">"Outstanding kids school"</p>
             <p className="testimonial-author">Siddhi Burde</p>
             <div className="rating">
-              <span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span>
+              <span className="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
             </div>
-          </div>
+          </TestimonialCard>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="testimonial">
+          <TestimonialCard>
             <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
-            <p className="testimonial-content">"Classrooms are interactive. Having a playground is an add-on. Fee structure is moderate."</p>
+            <p className="testimonial-content">"Classrooms are interactive."</p>
             <p className="testimonial-author">Amar Shivajirao Deshmukh</p>
             <div className="rating">
-              <span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span>
+              <span className="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
             </div>
-          </div>
+          </TestimonialCard>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="testimonial">
+          <TestimonialCard>
             <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
-            <p className="testimonial-content">"The infrastructure is really good. Facility is really appreciable."</p>
+            <p className="testimonial-content">"The infrastructure is really good."</p>
             <p className="testimonial-author">THE_ EVIL_ DANCER</p>
             <div className="rating">
-              <span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span>
+              <span className="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
             </div>
-          </div>
+          </TestimonialCard>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="testimonial">
+          <TestimonialCard>
             <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
             <p className="testimonial-content">"Really impressive teaching facilities."</p>
             <p className="testimonial-author">Shreya Borate</p>
             <div className="rating">
-              <span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span>
+              <span className="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
             </div>
-          </div>
+          </TestimonialCard>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="testimonial">
+          <TestimonialCard>
             <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
             <p className="testimonial-content">"Highly recommend this school to other parents."</p>
             <p className="testimonial-author">Dishita Bhagtani</p>
             <div className="rating">
-              <span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span><span className="star">⭐</span>
+              <span className="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
             </div>
-          </div>
+          </TestimonialCard>
         </SwiperSlide>
       </Swiper>
     </TestimonialsWrapper>
