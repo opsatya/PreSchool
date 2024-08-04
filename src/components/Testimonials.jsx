@@ -147,7 +147,7 @@ const Testimonials = () => {
       >
         <SwiperSlide>
           <TestimonialCard>
-            <img src={reviewer1} alt="Parent A" className="reviewer-photo" />
+           
             <p className="testimonial-content">"Nice infrastructure and good faculty."</p>
             <p className="testimonial-author">Srushti Kodag</p>
             <div className="rating">
@@ -157,7 +157,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide>
           <TestimonialCard>
-            <img src={reviewer2} alt="Parent B" className="reviewer-photo" />
+           
             <p className="testimonial-content">"Very good staff."</p>
             <p className="testimonial-author">Priyanka Sakpal</p>
             <div className="rating">
@@ -167,7 +167,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide>
           <TestimonialCard>
-            <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
+            
             <p className="testimonial-content">"Good staff, good place, good teaching."</p>
             <p className="testimonial-author">Sudhir Gawade</p>
             <div className="rating">
@@ -177,7 +177,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide>
           <TestimonialCard>
-            <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
+           
             <p className="testimonial-content">"Great school, great team of teachers."</p>
             <p className="testimonial-author">Dr. Satish Sonkamble</p>
             <div className="rating">
@@ -187,7 +187,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide>
           <TestimonialCard>
-            <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
+          
             <p className="testimonial-content">"Outstanding kids school"</p>
             <p className="testimonial-author">Siddhi Burde</p>
             <div className="rating">
@@ -197,7 +197,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide>
           <TestimonialCard>
-            <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
+           
             <p className="testimonial-content">"Classrooms are interactive."</p>
             <p className="testimonial-author">Amar Shivajirao Deshmukh</p>
             <div className="rating">
@@ -207,7 +207,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide>
           <TestimonialCard>
-            <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
+           
             <p className="testimonial-content">"The infrastructure is really good."</p>
             <p className="testimonial-author">THE_ EVIL_ DANCER</p>
             <div className="rating">
@@ -217,7 +217,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide>
           <TestimonialCard>
-            <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
+           
             <p className="testimonial-content">"Really impressive teaching facilities."</p>
             <p className="testimonial-author">Shreya Borate</p>
             <div className="rating">
@@ -227,7 +227,6 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide>
           <TestimonialCard>
-            <img src={reviewer3} alt="Parent C" className="reviewer-photo" />
             <p className="testimonial-content">"Highly recommend this school to other parents."</p>
             <p className="testimonial-author">Dishita Bhagtani</p>
             <div className="rating">

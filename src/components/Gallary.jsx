@@ -13,9 +13,7 @@ import img9 from './GalleryPicture/img9.jpg';
 import img10 from './GalleryPicture/img10.jpg';
 import img11 from './GalleryPicture/img11.jpg';
 import img12 from './GalleryPicture/img12.jpeg';
-import img13 from './GalleryPicture/img13.jpg';
-import img14 from './GalleryPicture/img14.jpg';
-import img15 from './GalleryPicture/img15.jpg';
+
 
 const GalleryWrapper = styled.div`
   display: grid;
@@ -87,15 +85,7 @@ const Gallery = () => {
         <GalleryItem>
           <img src={img12} alt="Gallery Item 12" />
         </GalleryItem>
-        <GalleryItem>
-          <img src={img13} alt="Gallery Item 13" />
-        </GalleryItem>
-        <GalleryItem>
-          <img src={img14} alt="Gallery Item 14" />
-        </GalleryItem>
-        <GalleryItem>
-          <img src={img15} alt="Gallery Item 15" />
-        </GalleryItem>
+
       </GalleryWrapper>
     </div>
   );
