@@ -13,9 +13,9 @@ import img9 from './GalleryPicture/img9.jpg';
 import img10 from './GalleryPicture/img10.jpg';
 import img11 from './GalleryPicture/img11.jpg';
 import img12 from './GalleryPicture/img12.jpeg';
-import img13 from './GalleryPicture/img12.jpg';
-import img14 from './GalleryPicture/img12.jpg';
-import img15 from './GalleryPicture/img12.jpg';
+import img13 from './GalleryPicture/img13.jpg';
+import img14 from './GalleryPicture/img14.jpg';
+import img15 from './GalleryPicture/img15.jpg';
 
 const GalleryWrapper = styled.div`
   display: grid;
